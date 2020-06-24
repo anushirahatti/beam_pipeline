@@ -63,7 +63,7 @@ public class StarterPipeline {
     // Create the PCollection 'lines' by applying a 'Read' transform.
     p.apply("ReadMyFile", TextIO.read().from("gs://dataflow-cloud-academy-281113/beam_info.txt"))
      .apply("ExtractWords", Regex.split("\\s+"))
-     .apply("WriteMyFile", TextIO.write().to("beam_info_output"));
+     .apply("WriteMyFile", TextIO.write().to("gs://dataflow-cloud-academy-281113/beam_info_output"));
 
     p.run().waitUntilFinish();
   }
