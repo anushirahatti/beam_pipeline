@@ -69,6 +69,20 @@
             <cleanupDaemonThreads>false</cleanupDaemonThreads>
           </configuration>
         </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-jar-plugin</artifactId>
+          <version>${maven-jar-plugin.version}</version>
+          <configuration>
+            <archive>
+              <manifest>
+                <addClasspath>true</addClasspath>
+                <classpathPrefix>lib/</classpathPrefix>
+                <mainClass>StarterPipeline</mainClass>
+              </manifest>
+            </archive>
+          </configuration>
+        </plugin>
       </plugins>
     </pluginManagement>
   </build>
@@ -96,9 +110,10 @@
     
     <!-- Include the Google Cloud Dataflow runner -P dataflow-runner -->
     <dependency>
-      <groupId>org.apache.beam</groupId>
-      <artifactId>beam-runners-google-cloud-dataflow-java</artifactId>
-      <scope>runtime</scope>
+        <groupId>org.apache.beam</groupId>
+        <artifactId>beam-runners-google-cloud-dataflow-java</artifactId>
+        <version>${beam.version}</version>
+        <scope>runtime</scope>
     </dependency>
 
     <!-- slf4j API frontend binding with JUL backend -->
