@@ -1,4 +1,6 @@
-# Serverless ETL Pipeline on Cloud Dataflow
+# Serverless ETL Pipeline Using Apache Beam & Cloud Dataflow
+
+![Architecture](https://github.com/anushirahatti/beam_pipeline/blob/master/apache-beam-architecture-distributed-processing-xenonstack.jpg)
 
 ![Architecture](https://github.com/anushirahatti/beam_pipeline/blob/master/simple-data-pipeline.jpg)
 
